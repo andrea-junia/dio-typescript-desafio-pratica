@@ -1,0 +1,18 @@
+const button = document.getElementById('button') as HTMLButtonElement; 
+const input1 = document.getElementById('input1') as HTMLInputElement;
+const input2 = document.getElementById('input2') as HTMLInputElement;
+
+
+function somarNumeros(nr1: number, nr2: number) {
+    return nr1 + nr2;
+}
+
+button.addEventListener('click', () => {
+    let sSoma: string = String(somarNumeros(Number(input1.value), Number(input2.value) ));
+    fPrintar(sSoma);
+})
+
+function fPrintar(sSoma: String){    
+    const cMsg = "Resultado da soma -> " + sSoma;
+    console.log(cMsg);
+}
